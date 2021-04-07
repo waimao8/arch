@@ -288,3 +288,34 @@ sudo nano /etc/systemd/user.conf
 将 DefaultLimitNOFILE 前面的#去掉，= 后面的数字改为524288.
 
 # 其他配置可参照https://github.com/lutris/lutris/wiki/ 修改。
+
+
+
+附加
+
+
+
+按照官网教程安装VMware Tools
+https://wiki.archlinux.org/index.php/VMware/Install_Arch_Linux_as_a_guest
+
+sudo pacman -S xf86-input-vmmouse xf86-video-vmware mesa
+
+sudo pacman -S open-vm-tools gtkmm3
+
+sudo systemctl start vmtoolsd.service
+
+sudo systemctl enable vmtoolsd.service
+
+sudo systemctl start vmware-vmblock-fuse.service
+
+sudo systemctl enable vmware-vmblock-fuse.service
+
+sudo pacman -S gtkmm gtk2
+
+sudo vim /etc/mkinitcpio.conf
+MODULES=(）前面加# 下一行加上下面的代码
+MODULES=(vsock vmw_vsock_vmci_transport vmw_balloon vmw_vmci vmwgfx)
+
+
+
+
