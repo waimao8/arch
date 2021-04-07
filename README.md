@@ -293,6 +293,20 @@ sudo nano /etc/systemd/user.conf
 
 附加
 
+安装软件商店
+
+sudo pacman -S pamac
+
+安装plank
+
+sudo pacman -S plank
+
+安装yay
+
+sudo pacman -S yay
+
+sudo pacman -S pcaman
+
 
 
 按照官网教程安装VMware Tools
