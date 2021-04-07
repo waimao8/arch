@@ -293,6 +293,10 @@ sudo nano /etc/systemd/user.conf
 
 附加
 
+系统更新
+
+sudo pacman -Syu 
+
 安装软件商店
 
 sudo pacman -S pamac
