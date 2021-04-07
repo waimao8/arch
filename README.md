@@ -293,6 +293,21 @@ sudo nano /etc/systemd/user.conf
 
 附加
 
+
+Arch Linux 更新源（以清华 arch 源为例）
+
+sudo vim /etc/pacman.conf
+把multilib和它下面一行的 # 去掉，具体是把光标移到 # 那，按 x ，然后在文件里添加 archlinuxcn 源，按 i 输入
+
+[archlinuxcn]
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+
+sudo pacman -Syu
+
+sudo pacman -S archlinuxcn-keyring
+
+
+
 系统更新
 
 sudo pacman -Syu 
@@ -310,6 +325,8 @@ sudo pacman -S plank
 sudo pacman -S yay
 
 sudo pacman -S pcaman
+
+
 
 
 
